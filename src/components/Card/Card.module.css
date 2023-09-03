@@ -1,0 +1,32 @@
+.contenedor {
+    width: 200px;
+    display: flex;
+    flex-direction:column;
+    background-color: rgba(0, 0, 0, 0.446);
+    padding: 1rem;
+    border: 2px solid #043c6e; 
+    border-radius: 1rem;
+    color: #88e23b;
+    font-family: 'Patrick Hand', cursive;
+    /* backdrop-filter: blur(2px); */
+}
+
+.h2 {
+    margin: 1px;
+    text-align: start;
+}
+
+.button{
+  background-color: #043c6e6e;
+  color: #60a85f;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-top-left-radius:1rem;
+  border-top-right-radius: 1rem;
+}
+
+.button:hover{
+    background-color:#043c6e;
+}
