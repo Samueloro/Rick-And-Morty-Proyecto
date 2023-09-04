@@ -1,13 +1,15 @@
 .contenedor{
-    
+
     width: fit-content;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 1rem;
-    border: 1px solid #60a85f;
-    border-radius: 1rem;
+    flex-direction:row;
     gap: 1rem;
     margin: 1rem;
-   
+    padding: 1px 1px 1px 1px;
+/*     position:absolute; */
+    top: 3rem;
+    left: 1rem;
+    flex-wrap: wrap ;
+    justify-content:space-evenly;
+
 }

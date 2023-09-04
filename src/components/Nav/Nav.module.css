@@ -1,0 +1,9 @@
+.Nav{
+    background-color: #64319055;
+    height: fit-content;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
