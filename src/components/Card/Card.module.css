@@ -11,9 +11,15 @@
     /* backdrop-filter: blur(2px); */
 }
 
+.contenedor:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .h2 {
+/*     position: absolute; */
     margin: 1px;
-    text-align: start;
+   
 }
 
 .button{
@@ -29,4 +35,38 @@
 
 .button:hover{
     background-color:#043c6e;
+
+}
+
+.button:active{
+    background-color: #0f375a;
+    transform: scale(0.9);
+}
+ 
+.button:focus{
+    background-color: #043c6ec0;
+    outline: none;
+}
+.image {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.property{
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: start;
+    
+}
+
+.name { 
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    justify-content: center;
+/*     background-color:#043c6e44; */
+/*     border-radius: 5px; */
+/*     border:solid #60a85f57; */
 }

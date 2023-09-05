@@ -5,14 +5,17 @@ export default function Card({ id, name, status, species, gender, origin, image,
 
     return (
         <div className={style.contenedor}>
-            <button onClick={()=> onClose(id)} className={style.button} id={id}>X</button>
-            <img src={image} alt={name} />
-{/*             //poner div posición absolute */}
-            <h2 className={style.h2}>{name}</h2>
-            <h2 className={style.h2}>{status}</h2>
-            <h2 className={style.h2}>{species}</h2>
-            <h2 className={style.h2}>{gender}</h2>
-            <h2 className={style.h2}>{origin.name}</h2>
+            <button onClick={() => onClose(id)} className={style.button} id={id}>X</button>
+            {/*             <h2 className={style.h2}>{id}</h2> */}
+            <img src={image} alt={name} className={style.image} />
+            {/*             //poner div posición absolute */}
+            <div className={style.h2}>
+                <h2 className={style.name}>{name}</h2>
+                <h2 className={style.property}>{status}</h2>
+                <h2 className={style.property}>{species}</h2>
+                <h2 className={style.property}>{gender}</h2>
+                <h2 className={style.property}>{origin.name}</h2>
+            </div>
         </div>
     )
 }

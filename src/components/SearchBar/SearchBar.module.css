@@ -7,10 +7,16 @@
     align-items: center;
     background-color: #16144595;
     border: 1px solid #161445;
+    border-left: 0;
     border-right: none;
-    border-radius: 10px 0 0 10px;
     padding: 0px 4px 0px 16px;
     height: 30px;
+}
+
+.barra:focus {
+    background-color: #161445c0;
+    border-color: #161445;
+    outline: none;
 }
 
 .button {
@@ -22,4 +28,17 @@
     width: 64px;
     margin: 0;
     color: #c5c5d9;
+}
+
+.button:hover {
+    background-color: #161445cc;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.button:focus{
+    background-color: #161445cc;
+    outline: none;
 }

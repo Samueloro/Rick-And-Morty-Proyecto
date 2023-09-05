@@ -1,9 +1,40 @@
 .Nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #64319055;
     height: fit-content;
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.flexNav{
+    display: flex;
+    align-items: center;
+}
+
+.random{
+    border: 1px solid #161445;
+    background-color: #16144595;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    height: 30px;
+    width: fit-content;
+    margin:0;
+    color: #c5c5d9;
+}
+
+.random:hover{
+    background-color: #161445cc;
+}
+
+.random:active{
+    transform: scale(0.9);
+}
+.random:focus{
+    background-color: #161445cc;
+    outline: none;
 }
