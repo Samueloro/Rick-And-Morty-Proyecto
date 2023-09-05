@@ -25,19 +25,10 @@ function App() {
   }
   
   const onClose = (id)=>{
-    console.log(characters);
-    const parsedId = parseInt(id)
-    const newCharacters = characters.map((character)=>{
-      if(character.id !== parsedId){
-        return character;
-      } //crear variable para setearla}
-      console.log(character.id);
-    })
-    console.log(id);
-    console.log(parsedId);
-    setCharacters(newCharacters)
-    console.log('ola zi', characters); 
+    const newCharacters = characters.filter(character => character.id !== Number(id))
+    setCharacters(newCharacters) 
   }
+
   return (
     <>
       <div className='App'>

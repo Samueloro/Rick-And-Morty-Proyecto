@@ -3,13 +3,9 @@ import style from './Card.module.css';
 
 export default function Card({ id, name, status, species, gender, origin, image, onClose }) {
 
-    const handleCardClose = () => {
-     
-        onClose(id);
-    }
     return (
         <div className={style.contenedor}>
-            <button onClick={handleCardClose} className={style.button} id={id}>X</button>
+            <button onClick={()=> onClose(id)} className={style.button} id={id}>X</button>
             <img src={image} alt={name} />
 {/*             //poner div posición absolute */}
             <h2 className={style.h2}>{name}</h2>
