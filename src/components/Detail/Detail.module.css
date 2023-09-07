@@ -1,0 +1,31 @@
+.container{ 
+    background-color: rgba(0, 0, 0, 0.253);
+    font-family: 'Patrick Hand', cursive;
+    color: #88e23b;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem;
+    place-items: center;
+    height: 80vh;
+    backdrop-filter: blur(1px);
+    border-radius: 1rem;
+}
+
+.column{
+    padding: 1rem;
+    width: 700px;
+}
+
+.text{
+    background-color:  #16144579;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+ .image{
+    width: 400px;
+    border-radius: 12rem;
+ }
