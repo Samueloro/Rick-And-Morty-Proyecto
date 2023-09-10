@@ -12,3 +12,26 @@
     margin: 3rem;
 
 }
+
+.logout{
+    position:fixed;
+    bottom: 5%;
+    right: 3%;
+    border: 3px solid #60a85fb7;
+    background-color: #89e23ba4;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: fit-content 10px;
+    color: #043c6e;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.logout:hover{
+    background-color: #88e23b;
+}
+
+.logout:active{
+    transform: scale(.9);
+}

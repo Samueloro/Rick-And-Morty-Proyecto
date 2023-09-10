@@ -38,7 +38,7 @@ export default function Detail() {
                 <img className={style.image} src={character.image} alt={character.name} />
                 <div >{character.id}</div>
                 <NavLink to={'/home'}>
-                <button>Back</button>
+                <button className={style.backButton}>Back</button>
                 </NavLink>
             </div>
 

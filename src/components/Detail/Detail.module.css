@@ -1,4 +1,4 @@
-.container{ 
+.container {
     background-color: rgba(0, 0, 0, 0.253);
     font-family: 'Patrick Hand', cursive;
     color: #88e23b;
@@ -12,20 +12,38 @@
     border-radius: 1rem;
 }
 
-.column{
+.column {
     padding: 1rem;
     width: 700px;
 }
 
-.text{
-    background-color:  #16144579;
+.text {
+    background-color: #16144579;
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     padding-right: 1rem;
     padding-left: 1rem;
 }
- .image{
+
+.image {
+    margin-top: 80px;
     width: 400px;
     border-radius: 12rem;
- }
+}
+
+.backButton {
+    border: 3px solid #60a85f;
+    background-color: #88e23b;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: fit-content 10px;
+    color: #043c6e;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.backButton:active {
+    transform: scale(.9);
+}

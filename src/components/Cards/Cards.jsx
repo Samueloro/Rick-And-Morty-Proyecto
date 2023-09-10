@@ -1,7 +1,25 @@
+
+import { useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import style from "./Cards.module.css"
+import { useEffect } from "react"
 
-export default function Cards({ characters, onClose }) {
+export default function Cards({ characters, onClose, setAccess }) {
+    const navigate = useNavigate();
+//FUNCIÓN DE SALIDA
+    const logout = () => {
+        setAccess(false)
+        navigate('/')
+
+    }
+
+    //CAMBIO DE BACKGROUND
+    useEffect(() => {
+        const root = document.documentElement;
+        root.style.setProperty('--background', 'url("../Fondos/Rick\ and\ Morty.jpg")')
+    }, []);
+
+
     return (
         <div className={style.contenedor}>
             {
@@ -22,6 +40,7 @@ export default function Cards({ characters, onClose }) {
                     )
                 })
             }
+            <button onClick={logout} className={style.logout}>Salir</button>
         </div>
     )
 }

@@ -1,0 +1,65 @@
+.conteiner {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    display: flex;
+    margin: 10%;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border: 3px solid #8f369c;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: absolute;
+
+
+}
+
+.labels {
+    color: #88e23b;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.errors {
+    font-size: 14px;
+    color: #88e23b;
+}
+
+.inputs{
+    background-color: #22356ea6;
+    border:1.5px solid #bd93c6 ;
+    border-radius: 7px;
+    padding: 0px 4px 0px 16px;
+    height: 25px;
+}
+
+.inputs:focus{
+    border-color: #8f369c;
+    outline: none;
+}
+
+.submit{
+    border: 3px solid #60a85f41;
+    background-color: #89e23b6c;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: fit-content 10px;
+    color: #043c6e67;
+    font-weight: bold;
+}
+
+.submit:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.submit:active{
+    transform: scale(1);
+}
+
+.submit:enabled{
+    border: 3px solid #60a85f;
+    background-color: #89e23b;
+    color: #043c6e;
+}
