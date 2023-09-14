@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useParams } from "react-router-dom"
+import { useParams} from "react-router-dom"
 import { useState, useEffect } from "react"
 import style from './Detail.module.css'
 import { NavLink } from "react-router-dom"
@@ -8,6 +8,7 @@ export default function Detail() {
 
     const { id } = useParams();
     const [character, setCharacter] = useState({})
+
 
     useEffect(() => {
         axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
@@ -22,6 +23,10 @@ export default function Detail() {
                 console.error("Error al obtener datos:", error);
             })
     }, [id]);
+
+    const handleclick = ((event)=>{
+        console.log(event)
+    })
 
 
     return (
@@ -38,7 +43,7 @@ export default function Detail() {
                 <img className={style.image} src={character.image} alt={character.name} />
                 <div >{character.id}</div>
                 <NavLink to={'/home'}>
-                <button className={style.backButton}>Back</button>
+                    <button className={style.backButton} onClick={handleclick}>Atras</button>
                 </NavLink>
             </div>
 

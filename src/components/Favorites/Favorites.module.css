@@ -1,0 +1,48 @@
+.contenedor{
+    width: fit-content;
+    display: flex;
+    flex-direction:row;
+    gap: 1rem;
+    padding: 1px 1px 1px 1px;
+    /*     position:absolute; */
+    top: 3rem;
+    left: 1rem;
+    flex-wrap: wrap ;
+    justify-content:space-evenly;
+    margin: 3rem;
+
+}
+
+.contenedorSelect{
+    margin: 2rem;
+    
+}
+
+.select1{
+    border: 1px solid #161445;
+    background-color: #16144595;
+    border-radius: 10px 0px 0px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 8px 0px 8px;
+}
+.select2{
+    border: 1px solid #161445;
+    background-color: #16144595;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 8px 0px 8px;
+}
+
+.logout:hover{
+    background-color: #88e23b;
+}
+
+.logout:active{
+    transform: scale(.9);
+}

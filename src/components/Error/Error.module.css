@@ -1,0 +1,19 @@
+.title{
+    color: #000000;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    position:fixed;
+    font-weight: bold;
+    top: 59%;
+    right: 47%;
+    color: #85529e;
+}
+
+.text{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 25px;
+    position:fixed;
+    top: 83%;
+    right: 42%;
+    color: #043c6e;
+}

@@ -1,1 +1,54 @@
+.container {
+    display: flex;
+
+}
+
+.img {
+    position: relative;
+    bottom: 10%;
+    width: 800px;
+    height: 450px;
+}
+
+
+.text {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    color: azure;
+    position: relative;
+    display: flex;
+    top: 3rem;
+    background-color: rgba(0, 0, 0, 0.521);
+    border: 2px solid #7B538F;
+    border-radius: 1rem;
+    backdrop-filter: blur(3px);
+
+}
+
+.parrafo {
+    line-height: 1.5;
+    margin: 2rem;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    top: 50%;
+}
+
+.title {
+    color: #88e23b;
+    font-size: 25px;
+}
+
+.pie {
+    color: #88e23b;
+}
+
+.logos {
+    width: 100;
+    position: absolute;
+    top: 90%;
+    left: 65%;
+}
 

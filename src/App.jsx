@@ -10,13 +10,15 @@ import Detail from './components/Detail/Detail'
 import About from './components/About/About'
 import Error from './components/Error/Error'
 import Start from './components/Start/Start'
+import Favorites from './components/Favorites/Favorites'
 
 
 
 function App() {
-//ESTADOS LOCALES
+  //ESTADOS LOCALES
   const [characters, setCharacters] = useState([]);
   const location = useLocation();
+
 
 
   const navigate = useNavigate();
@@ -35,12 +37,12 @@ function App() {
     }
   }
   useEffect(() => {
-    !access && navigate('/');
+    !access && navigate('/');  //ingreso al home//*cambiar '/'
   }, [access]);
 
 
-//FUNCIÓN DE BUSCAR PERSONAJES
-  const onSearch = (id) => {
+  //FUNCIÓN DE BUSCAR PERSONAJES
+  const onSearch = (id, name) => {
     const characterId = String(id);
     const characterInList = characters.some((character) => character.id === Number(id))//some es para validar si algún personaje tiene el mismo id buscado//? devuelve booleano
 
@@ -60,26 +62,32 @@ function App() {
       })
     }
   }
-//FUNCION DE PERSONAJES AL AZAR
+  // FUNCIÓN PARA BUSCAR CON NAME
+  //? Hacer una función que si se le pasa el nombre retorne el id del personaje y este id pasarlo a on Search 
+  //? 
+
+
+  //FUNCION DE PERSONAJES AL AZAR
   const randomCharacter = () => {
     const randomId = Math.floor(Math.random() * (826 - 1 + 1) + 1) // me devuelve un número aleatorrio entre 826 y 1
     return onSearch(randomId) // llamo a onSearch con el random 
   }
 
-//FUNCIÓN PARA CERRAR CARTAS
+  //FUNCIÓN PARA CERRAR CARTAS
   const onClose = (id) => {
     const newCharacters = characters.filter(character => character.id !== Number(id))
     setCharacters(newCharacters)
   }
-//RENDER
+  //RENDER
   return (
     <>
       <div className='App'>
         {location.pathname !== '/' ? <Nav onSearch={onSearch} randomCharacter={randomCharacter} /> : null}
         <Routes>
           <Route path='/' element={<Start login={login} />} />
-          <Route path='/home' element={<Cards characters={characters} onClose={onClose} setAccess={setAccess}/>} />
+          <Route path='/home' element={<Cards characters={characters} onClose={onClose} setAccess={setAccess} />} />
           <Route path='/about' element={<About />} />
+          <Route path='/favorites' element={<Favorites onClose={onClose}/>}/>
           <Route path='/detail/:id' element={<Detail />} />
           <Route path='/*' element={<Error />} />
         </Routes>

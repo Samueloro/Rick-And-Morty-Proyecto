@@ -6,10 +6,10 @@ export default function Validation (input){
 
 
     if(!regexEmail.test(input.email)){
-        error.email = 'Debe ingresar un Email correcto'
+        error.email = 'Debe ingresar un Correo valido'
     }
     if(!input.email){
-        error.email = 'Debe ingresar un Email'
+        error.email = 'Debe ingresar un Correo'
     }
     if(input.email>35){
         error.email='No debe tener un mayor a 35 caracteres'

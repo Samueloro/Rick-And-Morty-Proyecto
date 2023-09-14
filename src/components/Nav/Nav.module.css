@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #64319055;
     height: fit-content;
-    padding: 5px;
+    padding: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     margin-right: 4%;
+
 }
 
 .random {
@@ -47,7 +48,9 @@
 }
 
 .link2 {
-    margin-left: 100px;
+    position: absolute;
+    left: 20%;
+    top: 10px;
     border: 1px solid #161445;
     background-color: #16144595;
     border-radius: 10px;
@@ -68,7 +71,9 @@
 }
 
 .link1 {
-    margin-left: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10%;
     border: 1px solid #161445;
     background-color: #16144595;
     border-radius: 10px;
@@ -87,3 +92,27 @@
 .link1:active{
     transform: scale(0.9);
 }
+
+.link3 {
+    position: absolute;
+    top: 10px;
+    left: 30%;
+    border: 1px solid #161445;
+    background-color: #16144595;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: fit-content 10px;
+    color: #c5c5d9;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.link3:hover{
+    background-color: #161445cc;
+}
+
+.link3:active{
+    transform: scale(0.9);
+}
+

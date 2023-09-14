@@ -5,9 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin: 2rem;
+    margin: 6rem;
     place-items: center;
-    height: 80vh;
+    height: 70vh;
     backdrop-filter: blur(1px);
     border-radius: 1rem;
 }
@@ -47,3 +47,4 @@
 .backButton:active {
     transform: scale(.9);
 }
+

@@ -8,10 +8,13 @@ export default function Nav({ onSearch, randomCharacter }) {
         <div className={style.Nav}>
             <div className={style.buttons}>
                 <NavLink to={'/home'}>
-                    <button className={style.link1} >Home</button>
+                    <button className={style.link1}>Inicio</button>
                 </NavLink>
                 <NavLink to={'/about'}>
                     <button className={style.link2}>About</button>
+                </NavLink>
+                <NavLink to={'/favorites'}>
+                    <button className={style.link3}>Favoritos</button>
                 </NavLink>
             </div>
             <div className={style.flexNav}>

@@ -4,6 +4,7 @@
     flex-direction:column;
     background-color: rgba(0, 0, 0, 0.446);
     padding: 1rem;
+    padding-bottom: 0;
     border: 2px solid #043c6e; 
     border-radius: 1rem;
     color: #88e23b;
@@ -99,4 +100,15 @@
 
 .Navname{
     text-decoration:none;
+}
+
+.favorite{
+    background: none;
+    border: none;
+}
+
+.favorites{
+    position: relative;
+    bottom: 70%;
+    left: 40%;
 }

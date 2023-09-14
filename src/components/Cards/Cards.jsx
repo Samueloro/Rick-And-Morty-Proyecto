@@ -12,7 +12,6 @@ export default function Cards({ characters, onClose, setAccess }) {
         navigate('/')
 
     }
-
     //CAMBIO DE BACKGROUND
     useEffect(() => {
         const root = document.documentElement;
@@ -24,7 +23,6 @@ export default function Cards({ characters, onClose, setAccess }) {
         <div className={style.contenedor}>
             {
                 characters.map(({ id, name, status, species, gender, origin, image }) => {
-                    console.log()
                     return (
                         <Card
                             key={id}
