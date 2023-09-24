@@ -10,17 +10,17 @@ const reducer = (state = initialState, { type, payload }) => {
         case ADD_FAV:
             return {
                 ...state,
-                allCharacters: [...state.allCharacters, payload]
-            }
+                myFavorites: payload,
+                allCharacters: payload
+            };
         case REMOVE_FAV:
-            const filterFavs = state.allCharacters.filter(
-                fav => fav.id !== Number(payload))
             return {
                 ...state,
-                allCharacters: filterFavs   
-            }
+                myFavorites: payload,
+                allCharacters: payload,
+            };
         case FILTER:
-            if (payload ==='ALL') return {
+            if (payload === 'ALL') return {
                 ...state,
                 myFavorites: state.allCharacters,
             }
@@ -28,10 +28,10 @@ const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 myFavorites: filterGender
-            }
+            };
         case ORDER:
             let orderCopy = [...state.allCharacters];
-            if(payload === "A") {
+            if (payload === "A") {
                 orderCopy.sort(
                     (a, b) => {
                         if (a.id > b.id) return 1;
@@ -45,15 +45,15 @@ const reducer = (state = initialState, { type, payload }) => {
                         else return -1;
                     }
                 )
-            }
+            };
             return {
                 ...state,
                 myFavorites: orderCopy
-            }
+            };
         default:
             return { ...state }
-    }
+    };
 
-}
+};
 
 export default reducer;

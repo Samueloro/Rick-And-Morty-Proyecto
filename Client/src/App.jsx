@@ -24,11 +24,21 @@ function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
 
-  const EMAIL = 'ejemplo@gmail.com';
-  const PASSWORD = '123456';
-
+  
   //FUNCION DE LOGEO
   function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
+ }
+  
+  /*   const EMAIL = 'ejemplo@gmail.com';
+    const PASSWORD = '123456'; */
+/*   function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {
       setAccess(true);
       navigate('/home');
@@ -37,8 +47,8 @@ function App() {
     }
   }
   useEffect(() => {
-    !access && navigate('/');  //ingreso al home//*cambiar '/'
-  }, [access]);
+    access && navigate('/');  //ingreso al home//cambiar '/'
+  }, [access]); */
 
 
   //FUNCIÓN DE BUSCAR PERSONAJES

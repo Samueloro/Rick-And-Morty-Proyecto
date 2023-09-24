@@ -24,9 +24,6 @@ export default function Detail() {
             })
     }, [id]);
 
-    const handleclick = ((event)=>{
-        console.log(event)
-    })
 
 
     return (
@@ -43,7 +40,7 @@ export default function Detail() {
                 <img className={style.image} src={character.image} alt={character.name} />
                 <div >{character.id}</div>
                 <NavLink to={'/home'}>
-                    <button className={style.backButton} onClick={handleclick}>Atras</button>
+                    <button className={style.backButton}>Atras</button>
                 </NavLink>
             </div>
 
