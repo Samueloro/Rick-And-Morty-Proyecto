@@ -24,54 +24,52 @@ function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
 
-  
+
   //FUNCION DE LOGEO
-  function login(userData) {
-    const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       setAccess(data);
-       access && navigate('/home');
-    });
- }
-  
+  async function login(userData) {
+    try {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      const { data } = await axios(URL + `?email=${email}&password=${password}`)
+      setAccess(data.access);
+      data.access && navigate('/home');
+    } catch (error) { };
+  };
+
+  useEffect(() => {
+    access && navigate('/');  //ingreso al home//cambiar '/'
+  }, [access]);
+
   /*   const EMAIL = 'ejemplo@gmail.com';
-    const PASSWORD = '123456'; */
-/*   function login(userData) {
+  const PASSWORD = '123456'; */
+  /*   function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {
       setAccess(true);
       navigate('/home');
     } else {
       alert('Datos invalidos')
     }
-  }
-  useEffect(() => {
-    access && navigate('/');  //ingreso al home//cambiar '/'
-  }, [access]); */
+  }*/
 
 
   //FUNCIÓN DE BUSCAR PERSONAJES
-  const onSearch = (id, name) => {
-    const characterId = String(id);
-    const characterInList = characters.some((character) => character.id === Number(id))//some es para validar si algún personaje tiene el mismo id buscado//? devuelve booleano
-
-    if (characterInList) {
-      alert(`¡El personaje con el ID: ${id} ya está agregado!`)
-
-    } else {
-      axios(`http://localhost:3001/rickandmorty/character/${characterId}`).then(({ data }) => {
-
+  async function onSearch(id, name) {
+    try {
+      const characterId = String(id);
+      const characterInList = characters.some((character) => character.id === Number(id))//some es para validar si algún personaje tiene el mismo id buscado//? devuelve booleano
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${characterId}`)
+      if (characterInList) {
+        alert(`¡El personaje con el ID: ${id} ya está agregado!`)
+      } else {
         if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
-
-        } else {
-          alert('¡No hay personajes con este ID!');
         }
-        /*       console.log(characterId) */
-      })
+      }
+    } catch (error) {
+      message: error.message
     }
   }
+
   // FUNCIÓN PARA BUSCAR CON NAME
   //? Hacer una función que si se le pasa el nombre retorne el id del personaje y este id pasarlo a on Search 
   //? 
@@ -97,7 +95,7 @@ function App() {
           <Route path='/' element={<Start login={login} />} />
           <Route path='/home' element={<Cards characters={characters} onClose={onClose} setAccess={setAccess} />} />
           <Route path='/about' element={<About />} />
-          <Route path='/favorites' element={<Favorites onClose={onClose}/>}/>
+          <Route path='/favorites' element={<Favorites onClose={onClose} />} />
           <Route path='/detail/:id' element={<Detail />} />
           <Route path='/*' element={<Error />} />
         </Routes>
@@ -105,5 +103,6 @@ function App() {
     </>
   )
 }
+
 
 export default App;

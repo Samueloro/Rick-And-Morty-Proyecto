@@ -29,20 +29,6 @@ function Card(props, /* { id, name, species, gender, image, onClose } */) {
 
     return (
         <div className={style.contenedor}>
-
-            <NavLink className={style.Navname} to={`/detail/${props.id}`}>
-                <h2 className={style.name}>{props.name}</h2>
-            </NavLink>
-
-            <button onClick={() => props.onClose(props.id)} className={style.button} id={props.id}>X</button>
-
-            <img src={props.image} alt={props.name} className={style.image} />
-
-            <div className={style.h2}>
-                <h2 className={style.property}>{props.species}</h2>
-                <h2 className={style.property2}>{props.gender}</h2>
-            </div>
-            
             <div className={style.favorites}>
                 {
                     isFav ? (
@@ -52,6 +38,19 @@ function Card(props, /* { id, name, species, gender, image, onClose } */) {
                     )
                 }
             </div>
+            <NavLink className={style.Navname} to={`/detail/${props.id}`}>
+                <h2 className={style.name}>{props.name}</h2>
+            </NavLink>
+
+            <button onClick={() => props.onClose(props.id)} className={style.button}  id={props.id}>X</button>
+
+            <img src={props.image} alt={props.name} className={style.image} />
+
+            <div className={style.h2}>
+                <h2 className={style.property}>{props.species}</h2>
+                <h2 className={style.property2}>{props.gender}</h2>
+            </div>
+            
         </div>
     )
 }
